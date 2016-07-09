@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
 }
 
-.question {
+#question, #player-scores {
   border: 10px solid white;
   margin: 150px auto 0;
   padding: 50px;
@@ -44,4 +44,15 @@ p {
   padding: 50px;
   margin: 50px 0 0 0;
 
+}
+
+#player-scores {
+  position: absolute;
+  top: 490px;
+  width: 880px;
+}
+
+#player-one-score, #player-two-score {
+  display: inline-block;
+  margin: 0 179px;
 }

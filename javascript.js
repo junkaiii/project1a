@@ -31,7 +31,7 @@ var loadNewQuestion = function(){
   indexOfQns = qnList.length - 1;
   indexNum = randomiseQn(0, indexOfQns);
   question = qnList[indexNum];
-  $('.question > p').html(question.qn);
+  $('#question > p').html(question.qn);
   $('#choice1').html(question.choice1);
   $('#choice2').html(question.choice2);
   $("#question-num").text('Question: ' + turnNumber); //updates turn number
@@ -82,7 +82,7 @@ var checkWinner = function(){
 
 
 
-$('.question > p').html(question.qn);
+$('#question > p').html(question.qn);
 
 $('#choice1').html(question.choice1);
 
