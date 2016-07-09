@@ -12,9 +12,9 @@ body {
   margin: 0 auto;
 }
 
-#question, #player-scores {
+#question{
   border: 10px solid white;
-  margin: 150px auto 0;
+  margin: 80px auto 0;
   padding: 50px;
 }
 
@@ -37,6 +37,10 @@ p {
   margin: 50px 0 0 0;
 }
 
+#choice1:hover, #choice2:hover {
+  background-color: #D7E8BA;
+}
+
 #choice2{
   position: absolute;
   right: 0px;
@@ -50,9 +54,52 @@ p {
   position: absolute;
   top: 490px;
   width: 880px;
+  margin: 150px auto 0;
+  padding: 50px;
+  border: 10px solid white;
+
 }
 
 #player-one-score, #player-two-score {
-  display: inline-block;
-  margin: 0 179px;
+  margin:0 auto;
+  text-align: center;
 }
+
+/*start animation*/
+
+/*#winner {
+  width: 1000px;
+  height: 800px;
+  background-color: #2E5077;
+  position: absolute;
+  top: -600px;
+  left: -10px;
+  -webkit-animation-name: winning; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: winning;
+  animation-duration: 2s;
+  font-size: 50px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes winning {
+    0%   {background-color:#2E5077; left:-10px; top:-1200px;}
+    100% {background-color:#2E5077; left:-10px; top:-600px;}
+}
+
+/* Standard syntax */
+@keyframes winning {
+  0%   {background-color:#2E5077; left:-10px; top:-1200px;}
+  100% {background-color:#2E5077; left:-10px; top:-600px;}
+}*/
+
+/*end animation*/
+
+/*backup
+#winner {
+  width: 1000px;
+  height: 800px;
+  background-color: #2E5077;
+  position: absolute;
+  top: -600px;
+  left: -10px;*/
