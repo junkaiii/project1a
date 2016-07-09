@@ -24,6 +24,62 @@ var question = qnList[indexNum]; // choosing a random question between 0 and que
 
 //---
 
+// splice and load new question
+
+var loadNewQuestion = function(){
+  qnList.splice(indexNum, 1);
+  indexOfQns = qnList.length - 1;
+  indexNum = randomiseQn(0, indexOfQns);
+  question = qnList[indexNum];
+  $('.question > p').html(question.qn);
+  $('#choice1').html(question.choice1);
+  $('#choice2').html(question.choice2);
+  $("#question-num").text('Question: ' + turnNumber); //updates turn number
+};
+
+
+//---
+
+// player scores
+
+var playerOneScore = 0;
+var playerTwoScore = 0;
+
+//----
+
+// turn checking (odd is player1 even is player2) and adding scores respectively
+
+var turnNumber = 1;
+var checkTurn = function() {
+  if (turnNumber % 2 !== 0) {
+    playerOneScore = playerOneScore + 1;
+    $('#player-one-score').html('Player 1:' + " " + playerOneScore);
+  } else if (turnNumber % 2 === 0) {
+    playerTwoScore = playerTwoScore + 1;
+    $('#player-two-score').html('Player 2:' + " " + playerTwoScore);
+  }
+};
+
+//---
+
+//checkWinner
+
+var checkWinner = function(){
+  if (turnNumber == 4) {
+    if (playerOneScore > playerTwoScore) {
+      console.log("Player 1 Wins");
+    } else if (playerTwoScore > playerOneScore) {
+      console.log("Player 2 Wins");
+    } else if (playerTwoScore == playerOneScore) {
+      console.log("Tie");
+    }
+  }
+};
+
+//---
+
+
+
 
 
 $('.question > p').html(question.qn);
@@ -34,16 +90,13 @@ $('#choice1').click(function() {
   console.log("choice 1");
   if (question.ans == "1") {
     console.log("correct");
+    checkTurn();
   } else {
     console.log("wrong");
   }
-  qnList.splice(indexNum, 1);
-  indexOfQns = qnList.length - 1;
-  indexNum = randomiseQn(0, indexOfQns);
-  question = qnList[indexNum];
-  $('.question > p').html(question.qn);
-  $('#choice1').html(question.choice1);
-  $('#choice2').html(question.choice2);
+  turnNumber = turnNumber + 1;
+  checkWinner();
+  loadNewQuestion();
 });
 
 $('#choice2').html(question.choice2);
@@ -52,16 +105,13 @@ $('#choice2').click(function() {
   console.log("choice 2");
   if (question.ans == "2") {
     console.log("correct");
+    checkTurn();
   } else {
     console.log("wrong");
   }
-  qnList.splice(indexNum, 1);
-  indexOfQns = qnList.length - 1;
-  indexNum = randomiseQn(0, indexOfQns);
-  question = qnList[indexNum];
-  $('.question > p').html(question.qn);
-  $('#choice1').html(question.choice1);
-  $('#choice2').html(question.choice2);
+  turnNumber = turnNumber + 1;
+  checkWinner();
+  loadNewQuestion();
 });
 
 
