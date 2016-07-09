@@ -89,20 +89,20 @@ var whoseTurn = function() {
 
 //checkWinner
 
-// var checkWinner = function(){
-//   if (turnNumber == 11) {
-//     if (playerOneScore > playerTwoScore) {
-//       console.log("Player 1 Wins");
-//       $('#container').append('<div id="winner">Player 1 Wins!</div>');
-//     } else if (playerTwoScore > playerOneScore) {
-//       console.log("Player 2 Wins");
-//       $('#container').append('<div id="winner">Player 2 Wins!</div>');
-//     } else if (playerTwoScore == playerOneScore) {
-//       console.log("Tie");
-//       $('#container').append('<div id="winner">Tie!</div>');
-//     }
-//   }
-// };
+var checkWinner = function(){
+  if (turnNumber == 11) {
+    if (playerOneScore > playerTwoScore) {
+      console.log("Player 1 Wins");
+      $('#container').append('<div id="winner">Player 1 Wins!</div>');
+    } else if (playerTwoScore > playerOneScore) {
+      console.log("Player 2 Wins");
+      $('#container').append('<div id="winner">Player 2 Wins!</div>');
+    } else if (playerTwoScore == playerOneScore) {
+      console.log("Tie");
+      $('#container').append('<div id="winner">Tie!</div>');
+    }
+  }
+};
 
 //---
 
