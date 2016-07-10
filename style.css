@@ -67,13 +67,12 @@ p {
 
 /*start animation*/
 
-/*#winner {
+#winner {
   width: 1000px;
   height: 800px;
   background-color: #2E5077;
   position: absolute;
-  top: -600px;
-  left: -10px;
+  top: 50px;
   -webkit-animation-name: winning; /* Chrome, Safari, Opera */
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: winning;
@@ -83,15 +82,16 @@ p {
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes winning {
-    0%   {background-color:#2E5077; left:-10px; top:-1200px;}
-    100% {background-color:#2E5077; left:-10px; top:-600px;}
+    0%   {background-color:#2E5077; left:460px; top:-500px;}
+    100% {background-color:#2E5077; left:460px; top: 50px;}
+
 }
 
 /* Standard syntax */
 @keyframes winning {
-  0%   {background-color:#2E5077; left:-10px; top:-1200px;}
-  100% {background-color:#2E5077; left:-10px; top:-600px;}
-}*/
+  0%   {background-color:#2E5077; left:460px; top:-500px;}
+  100% {background-color:#2E5077; left:460px; top:50px;}
+}
 
 /*end animation*/
 

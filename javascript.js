@@ -104,6 +104,10 @@ var checkWinner = function(){
   }
 };
 
+var winningCss = function(){
+  $('head').append('<style></style>');
+};
+
 //---
 
 $('#question > p').html(question.qn);
